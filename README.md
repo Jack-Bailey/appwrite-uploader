@@ -48,6 +48,6 @@ Make sure your SECRET is set to something _secret_ and hard to guess
 
 ## Additional notes
 
-Add anything in ./public that you'd like to be served statically - I've used this function for my personal shortener site - [jck.cx](https://jck.cx)
+Anything in ./public will be served directly, without going through the uploader - I've used this function for my personal shortener site - [jck.cx](https://jck.cx)
 
 If you have any issues with this, please reach out to me on [discord](https://jackbailey.dev/discord)
