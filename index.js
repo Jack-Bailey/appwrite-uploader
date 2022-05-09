@@ -113,7 +113,7 @@ app.post("/upload", upload.single("sharex"), async function (req, res) {
 	}
 
 	try {
-		await appwrite.createDoc(document);
+		await appwrite.createDocument(document);
 	} catch {
 		return res.status(500).send("Internal server error");
 	}

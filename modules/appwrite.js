@@ -8,11 +8,6 @@ client.setEndpoint(process.env.APPWRITE_ENDPOINT).setProject(process.env.APPWRIT
 let database = new sdk.Database(client);
 let storage = new sdk.Storage(client);
 
-async function getDocuments() {
-	const response = await database.listDocuments(process.env.APPWRITE_COLLECTION);
-	return response;
-}
-
 async function getDocument(slug) {
 	const response = await database.listDocuments(process.env.APPWRITE_COLLECTION, [sdk.Query.equal("slug", slug)]);
 
@@ -32,8 +27,8 @@ async function getDocument(slug) {
 }
 
 async function uploadFile(file) {
-	let promise = await storage.createFile(process.env.APPWRITE_BUCKET, "unique()", file);
-	return promise;
+	const file = await storage.createFile(process.env.APPWRITE_BUCKET, "unique()", file);
+	return file;
 }
 
 async function getFile(fileID) {
@@ -52,16 +47,14 @@ async function getFile(fileID) {
 	};
 }
 
-async function createDoc(doc) {
+async function createDocument(doc) {
 	const response = database.createDocument(process.env.APPWRITE_COLLECTION, "unique()", doc);
 	return response;
 }
 
 module.exports = {
-	client,
-	getDocuments,
 	getDocument,
 	getFile,
 	uploadFile,
-	createDoc,
+	createDocument,
 };
