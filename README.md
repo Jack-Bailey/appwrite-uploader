@@ -1,4 +1,4 @@
-# Appwrite ShareX uploader + url shortener
+# Appwrite ShareX uploader + URL shortener
 
 Built mainly to test out appwrite.
 
@@ -12,7 +12,7 @@ You also need to have node (I used v16.15.0) with yarn or npm installed.
 
 Please also make sure you have git installed, if you do not - please download this repository as a zip, extract it to a suitable location and enter it. Then skip to [getting started](#getting-started)
 
-`git clone https://github.com/Jack-Bailey/appwrite-Uploader`
+`git clone https://github.com/Jack-Bailey/appwrite-uploader`
 
 # Getting started
 
@@ -45,5 +45,9 @@ Make sure your SECRET is set to something _secret_ and hard to guess
 ## Running appwrite-uploader
 
 `node index.js`
+
+## Additional notes
+
+Add anything in ./public that you'd like to be served statically - I've used this function for my personal shortener site - [jck.cx](https://jck.cx)
 
 If you have any issues with this, please reach out to me on [discord](https://jackbailey.dev/discord)
